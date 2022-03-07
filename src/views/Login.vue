@@ -1,7 +1,7 @@
 <template>
   
 <main>
-  <div :class="{container:true, signupmode:true}">
+  <div :class="loginClass">
     <div class="forms-container">
       <div class="signin-signup">
         <form class="sign-in-form">
@@ -63,8 +63,7 @@
           </p>
           <button
             class="btn transparent"
-            id="sign-up-btn"
-
+              @click="setLoginClass"
           >
             Sign up
           </button>
@@ -78,8 +77,9 @@
             laboriosam ad deleniti.
           </p>
           <button
+            @click="setLoginClass"
             class="btn transparent"
-            id="sign-in-btn"
+            
           >
             Sign in
           </button>
@@ -89,3 +89,18 @@
   </div>
 </main>
 </template>
+<script>
+export default {
+  name: 'Login',
+  data: ()=>({
+    loginClass: {container:true, signupmode:false}
+  }),
+  methods: {
+    setLoginClass(event){
+      if(event.type=='click'){
+        this.loginClass.signupmode = !this.loginClass.signupmode
+      }
+  }
+}
+}
+</script>

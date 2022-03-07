@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Bree+Serif&family=Oleo+Script+Swash+Caps&family=Shippori+Antique+B1&display=swap");
+@import url("../src/assets/sass/neon.scss");
+@import url("../src/assets/sass/auth.scss");
+
+$primary: #66CC8A;
+$secondary: #377DFA;
+$accent: #E9533B;
+$info: #3ABFF8;
+$success: #4BD399;
+$warning: #FBBE3C;
+$error: #E9533B;
+
+
+.font-sans {
+  font-family: "Shippori Antique B1", sans-serif;
+}
+
+.font-serif {
+  font-family: "Bree Serif", serif;
+}
+
+.font-script {
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+
+.font-mono {
+  font-family: "B612 Mono", monospace;
+}
+
+.router-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.router-link-exact-active {
+  animation: neon-primary 0.5s ease-in-out infinite alternate;
+  background-color: $primary;
+}
